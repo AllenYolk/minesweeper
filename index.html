@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title> Minesweeper </title>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="./js/main.js" type="text/javascript" defer></script>
+        <link rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css">
+        <link href="./css/style.css" rel="stylesheet" type="text/css" />
+        <link href="./css/easy.css" rel="stylesheet" type="text/css" id="difficulty-style" />
+    </head>
+
+    <body>
+        <div id="game">
+            <div id="bg">
+            <div id="bgcover">
+            <h1 id="caption"> Minesweeper </h1>
+            <div id="config-input">
+                <label for="difficulty">Difficulty: </label>
+                <select id="difficulty"  name="difficulty">
+                    <option value="easy">Easy: 9 x 9, 10 mines</option>
+                    <option value="normal">Normal: 16 x 16, 40 mines</option>
+                    <option value="hard">Hard: 16 x 30, 99 mines</option>
+                </select>
+                <button type="button" id="new-game">New Game</button>
+            </div>
+            <h3 id="state-info"> Click to Start! </h3>
+
+            <header id="gameheader">    
+                <span class="state-digits" id="mine-remaining"> 
+                    Remaining Mines: {{ remainingMines }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <span class="state-digits" id="used-time">
+                    Used Time: {{ usedTime }}
+                </span>
+            </header>
+            </div>
+            </div>
+            <div class="board" id="game-field">
+                <div class="cell"></div>
+            </div>
+        </div>
+    </body>
+</html>
