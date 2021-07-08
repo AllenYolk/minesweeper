@@ -114,7 +114,6 @@ function disclose(clickPlace) {
         check(x, y);
         return;
     }
-    alert("disclose complete");
 }
 
 function markMine(clickPlace) {
@@ -359,6 +358,10 @@ function renderField() {
                 case -5:
                     cells[i].className = `cell-explode`; 
                     cells[i].textContent = "X";
+                    break;
+                case 1:
+                    cells[i].className = 'cell';
+                    cells[i].textContent = "";
                     break;
             }
         }
